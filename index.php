@@ -31,12 +31,23 @@ class Movie{
 }
 
 $titanic = new Movie('Titanic', 'italiano', new Genere('horror','romantico'));
-$titanic -> getDetails('horror', 'Spilberg');
+$titanic -> getDetails('horror', 'Cameron');
 
 $fight_club = new Movie('Fight Club', 'inglese', new Genere('horror','romantico'));
-
-echo 'nome film: ', $titanic -> nome . "<br/>", 'lingua: ', $titanic -> lingua . "<br/>", 'genere: ',  $titanic -> genere . "<br/>", 'regista: ', $titanic -> regista . "<br/>";
-echo 'nome film: ', $fight_club -> nome . "<br/>", 'lingua: ', $fight_club -> lingua . "<br/>", 'genere: ',  $fight_club -> genere . "<br/>", 'regista: ', $fight_club -> regista;
+$fight_club -> getDetails('Thriller/Drammatico', 'Fincher');
 
 
 ?>
+    <div class="container">
+        <h1><?php echo $titanic -> nome ?></h1>
+        <p>Lingua: <?php echo $titanic -> lingua ?></p>
+        <p>Genere: <?php echo $titanic -> genere ?></p>
+        <p>Regista: <?php echo $titanic -> regista ?></p>
+    </div>
+
+    <div class="container">
+        <h1><?php echo $fight_club -> nome ?></h1>
+        <p>Lingua: <?php echo $fight_club -> lingua ?></p>
+        <p>Genere: <?php echo $fight_club -> genere ?></p>
+        <p>Regista: <?php echo $fight_club -> regista ?></p>
+    </div>
