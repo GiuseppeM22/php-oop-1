@@ -19,10 +19,19 @@ class Movie{
         }
     }
 
+    public function getDetails($genere, $regista){
+        $this -> genere = $genere;
+        $this -> regista = $regista;
+    }
 }
 
 $titanic = new Movie('Titanic', 'italiano');
-echo $titanic -> nome . "<br/>", $titanic -> lingua ;
-// $titanic -> regista = "Spilberg";
+$titanic -> getDetails('horror', 'Spilberg');
+
+$fight_club = new Movie('Fight Club', 'inglese');
+
+echo 'nome film: ', $titanic -> nome . "<br/>", 'lingua: ', $titanic -> lingua . "<br/>", 'genere: ',  $titanic -> genere . "<br/>", 'regista: ', $titanic -> regista . "<br/>";
+echo 'nome film: ', $fight_club -> nome . "<br/>", 'lingua: ', $fight_club -> lingua . "<br/>", 'genere: ',  $fight_club -> genere . "<br/>", 'regista: ', $fight_club -> regista;
+
 
 ?>
